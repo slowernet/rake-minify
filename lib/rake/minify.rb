@@ -1,6 +1,5 @@
 require 'rake'
 require 'rake/tasklib'
-require 'jsmin'
 
 class Rake::Minify < Rake::TaskLib
 
