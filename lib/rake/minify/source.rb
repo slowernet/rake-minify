@@ -19,8 +19,11 @@ class Rake::Minify::Source
     end
 
     output = CoffeeScript.compile(output, :bare => @coffee_bare) if coffee?
-    output = JSMin.minify(output).strip if minify
-
+    output = Net::HTTP.post_form(
+      URI('https://closure-compiler.appspot.com/compile'), 
+      { js_code: output }
+    ).body if minify
+    
     output
   end
 

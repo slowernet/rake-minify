@@ -17,7 +17,6 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
 
   gem.add_dependency("rake", ">= 0.8.7")
-  gem.add_dependency("jsmin", "~> 1.0.1")
 
   gem.add_development_dependency("rspec", "~> 2.12.0")
   gem.add_development_dependency("cucumber", ">= 0")
