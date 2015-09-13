@@ -24,7 +24,7 @@ class Rake::Minify
     end
 
     def build
-      @sources.map { |s| s.build }.join("\n")
+      @sources.map { |s| "// #{File.basename(s.source)}\n" + s.build }.join("\n")
     end
 
     def dir(dir, &block)
